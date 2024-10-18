@@ -1,0 +1,17 @@
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+
+let name = await userInput.question('wat is je naam? ');
+
+
+
+function greeting (name){
+    console.log('Hallo, ' + name + '!')
+}
+
+greeting(name)
+
+
+process.exit()
